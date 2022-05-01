@@ -42,23 +42,21 @@ export const Gallery = () => {
   };
 
   return (
-    <GallerySection className="py-3 py-md-5 h-100">
-      <div className="container-lg h-100">
-        <div className="row px-2 px-sm-3 px-md-4 h-100" id="gallery">
+    <GallerySection className="py-3 py-md-5">
+      <div className="container-lg">
+        <div className="row px-2 px-sm-3 px-md-4" id="gallery">
           {isLoading && (
-            <div className="h-100 d-flex justify-content-center align-items-center flex-column">
+            <div className=" d-flex justify-content-center align-items-center flex-column">
               <Lottie options={defaultOptions} height={300} width={300} />
               <h1 className="mt-4 fw-bold">Photos is loading...</h1>
             </div>
           )}
           {!isLoading &&
+            // eslint-disable-next-line array-callback-return
             assets.items.map(({ fields }, index) => {
               if (fields.file.contentType === "image/jpeg") {
                 return (
-                  <div
-                    className="col-12 col-sm-6 col-md-4 pb-2 h-auto"
-                    key={index}
-                  >
+                  <div className="col-12 col-sm-6 col-md-4 pb-2" key={index}>
                     <a
                       style={{ display: isImg ? "" : "none" }}
                       href={fields.file.url}
@@ -80,7 +78,7 @@ export const Gallery = () => {
                       speed={2}
                       width="100%"
                       height="100%"
-                      viewBox="fields.file.details.image.height"
+                      viewBox="0 0 400 400"
                       backgroundColor="#f3f3f3"
                       foregroundColor="#ecebeb"
                       display={!isImg ? "" : "none"}
