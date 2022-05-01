@@ -4,7 +4,7 @@ const GallerySection = styled.section`
   height: 100%;
 
   .loading-screen {
-    height: 100vh !important;
+    height: 85vh !important;
   }
 
   h1 {

@@ -3,7 +3,6 @@ import { Navbar } from "./components/Navbar/Navbar.component";
 // import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { Routes, Route } from "react-router-dom";
 import { Gallery } from "./Pages/Gallery/Gallery.page";
-import { useEffect } from "react";
 
 // space: "6w7ez5o8i8ir",
 // accessToken: "6VdOujKPNjbwcOVmlwxXjmggJnoOCsvMY3daF3_UTuc",
