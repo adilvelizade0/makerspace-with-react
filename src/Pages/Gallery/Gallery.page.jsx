@@ -42,12 +42,12 @@ export const Gallery = () => {
   };
 
   return (
-    <GallerySection className="py-3 py-md-5 h-100">
-      <div className="container-lg h-100">
+    <GallerySection className="py-3 py-md-5">
+      <div className="container-lg">
         <div className="h-100 row px-2 px-sm-3 px-md-4" id="gallery">
           {isLoading && (
-            <div className="h-100 d-flex justify-content-center align-items-center flex-column">
-              <Lottie options={defaultOptions} height={300} width={300} />
+            <div className="loading-screen d-flex justify-content-center align-items-center flex-column">
+              <Lottie options={defaultOptions} height={250} width={250} />
               <h1 className="mt-4 fw-bold">Photos is loading...</h1>
             </div>
           )}
@@ -68,6 +68,7 @@ export const Gallery = () => {
                       data-pswp-height={fields.file.details.image.height}
                       target="_blank"
                       rel="noreferrer"
+                      className="position-relative"
                     >
                       <img
                         onLoadStart={() => setIsImg(false)}
