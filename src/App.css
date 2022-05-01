@@ -16,6 +16,7 @@ body {
 
 .App {
   text-align: center;
+  height: auto;
 }
 
 .lx-background {
@@ -38,8 +39,4 @@ body {
 
 .lx-background-item:nth-child(2n + 1) {
   background: #fefefe;
-}
-
-section {
-  height: auto !important;
 }

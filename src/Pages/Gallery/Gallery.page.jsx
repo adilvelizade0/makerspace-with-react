@@ -42,11 +42,11 @@ export const Gallery = () => {
   };
 
   return (
-    <GallerySection className="py-3 py-md-5">
-      <div className="container-lg">
-        <div className="row px-2 px-sm-3 px-md-4" id="gallery">
+    <GallerySection className="py-3 py-md-5 h-100">
+      <div className="container-lg h-100">
+        <div className="h-100 row px-2 px-sm-3 px-md-4" id="gallery">
           {isLoading && (
-            <div className=" d-flex justify-content-center align-items-center flex-column">
+            <div className="h-100 d-flex justify-content-center align-items-center flex-column">
               <Lottie options={defaultOptions} height={300} width={300} />
               <h1 className="mt-4 fw-bold">Photos is loading...</h1>
             </div>
@@ -56,7 +56,10 @@ export const Gallery = () => {
             assets.items.map(({ fields }, index) => {
               if (fields.file.contentType === "image/jpeg") {
                 return (
-                  <div className="col-12 col-sm-6 col-md-4 pb-2" key={index}>
+                  <div
+                    className="col-12 col-sm-6 col-md-4 pb-2 pb-md-3"
+                    key={index}
+                  >
                     <a
                       style={{ display: isImg ? "" : "none" }}
                       href={fields.file.url}
@@ -69,7 +72,7 @@ export const Gallery = () => {
                       <img
                         onLoadStart={() => setIsImg(false)}
                         onLoad={() => setIsImg(true)}
-                        className="img-fluid"
+                        className="img-fluid shadow rounded"
                         src={fields.file.url}
                         alt="img"
                       />
