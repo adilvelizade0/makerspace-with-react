@@ -75,8 +75,18 @@ export const Navbar = () => {
                 </li>
               </ul>
             </li>
+            <li className="nav-item d-lg-none">
+              <Link to="/subscribe" className="nav-link">
+                Subscribe
+              </Link>
+            </li>
           </ul>
         </div>
+        <span className="nav-item d-none d-lg-inline-block">
+          <Link to="/subscribe" className="nav-link">
+            Subscribe
+          </Link>
+        </span>
       </div>
     </NavbarContainer>
   );

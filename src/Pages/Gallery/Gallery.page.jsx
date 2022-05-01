@@ -60,24 +60,30 @@ export const Gallery = () => {
                     className="col-12 col-sm-6 col-md-4 pb-2 pb-md-3"
                     key={index}
                   >
-                    <a
-                      style={{ display: isImg ? "" : "none" }}
-                      href={fields.file.url}
-                      data-pswp-src={fields.file.url}
-                      data-pswp-width={fields.file.details.image.width}
-                      data-pswp-height={fields.file.details.image.height}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="position-relative"
-                    >
-                      <img
-                        onLoadStart={() => setIsImg(false)}
-                        onLoad={() => setIsImg(true)}
-                        className="img-fluid shadow rounded"
-                        src={fields.file.url}
-                        alt="img"
-                      />
-                    </a>
+                    <div className="photo">
+                      <div className="img-title">
+                        <p>{fields.title}</p>
+                      </div>
+
+                      <a
+                        style={{ display: isImg ? "" : "none" }}
+                        href={fields.file.url}
+                        data-pswp-src={fields.file.url}
+                        data-pswp-width={fields.file.details.image.width}
+                        data-pswp-height={fields.file.details.image.height}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="position-relative"
+                      >
+                        <img
+                          onLoadStart={() => setIsImg(false)}
+                          onLoad={() => setIsImg(true)}
+                          className="img-fluid shadow rounded"
+                          src={fields.file.url}
+                          alt="img"
+                        />
+                      </a>
+                    </div>
                     <ContentLoader
                       speed={2}
                       width="100%"
