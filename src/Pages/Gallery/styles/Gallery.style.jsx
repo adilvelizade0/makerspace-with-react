@@ -7,6 +7,14 @@ const GallerySection = styled.section`
     height: 85vh !important;
   }
 
+  .video__container {
+    border-radius: 0.25rem;
+
+    iframe {
+      border-radius: 0.25rem;
+    }
+  }
+
   .photo {
     width: 100%;
     height: 100%;

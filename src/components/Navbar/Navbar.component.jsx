@@ -50,6 +50,11 @@ export const Navbar = () => {
                 About
               </Link>
             </li>
+            <li className="nav-item">
+              <Link to="/contact" className="nav-link" aria-current="page">
+                Contact
+              </Link>
+            </li>
             <li className="nav-item dropdown">
               <div
                 className="nav-link dropdown-toggle"
@@ -76,7 +81,7 @@ export const Navbar = () => {
               </ul>
             </li>
             <li className="nav-item d-lg-none">
-              <Link to="/subscribe" className="nav-link">
+              <Link to="/subscribe" className="nav-link text-primary">
                 Subscribe
               </Link>
             </li>
@@ -84,6 +89,7 @@ export const Navbar = () => {
         </div>
         <span className="nav-item d-none d-lg-inline-block">
           <Link to="/subscribe" className="nav-link">
+            <i className="fa-solid fa-user me-2"></i>
             Subscribe
           </Link>
         </span>
