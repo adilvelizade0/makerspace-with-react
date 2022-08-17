@@ -5,6 +5,7 @@ import { Routes, Route } from "react-router-dom";
 import { Gallery } from "./Pages/Gallery/Gallery.page";
 import { Footer } from "./components/Footer/Footer.component";
 import { Contact } from "./Pages/Contact/Contact.page";
+import { Home } from "./Pages/Home/Home.page";
 
 // space: "6w7ez5o8i8ir",
 // accessToken: "6VdOujKPNjbwcOVmlwxXjmggJnoOCsvMY3daF3_UTuc",
@@ -16,6 +17,7 @@ function App() {
       <Routes>
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/" element={<Home />} />
       </Routes>
       <Footer />
 
